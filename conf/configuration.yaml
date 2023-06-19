@@ -1,0 +1,31 @@
+homeassistant: true
+permit_join: false
+mqtt:
+  base_topic: zigbee2mqttdev
+  server: mqtt:xxx.xxx.xxx.xxx
+  user: username
+  password: password
+serial:
+  port: tcp://xxx.xxx.xxx.xxx:xxxx
+  baudrate: 115200
+  disable_led: false
+advanced:
+  transmit_power: 20
+  log_syslog:
+    app_name: Zigbee2MQTT
+    eol: /n
+    host: localhost
+    localhost: localhost
+    path: /dev/log
+    pid: process.pid
+    port: 514
+    protocol: udp4
+    type: '5424'
+  channel: 25
+  homeassistant_legacy_entity_attributes: false
+  legacy_api: false
+  legacy_availability_payload: false
+frontend:
+  port: 8080
+device_options:
+  legacy: false
